@@ -547,7 +547,7 @@ AstroMap.prototype.loadLayers = function(target, mapProjection, showNomenclature
       })
     })
   });
-  overLayers.push(wfs);
+  //overLayers.push(wfs);
 
   group1 = new ol.layer.Group({'title': 'Base maps', layers: baseLayers});
   this.baseLayerGroup = group1;

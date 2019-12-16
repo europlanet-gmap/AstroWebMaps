@@ -37,8 +37,8 @@ combine: init
 	$(SRCDIR)/Map/AstroPoi.js \
 	$(SRCDIR)/Map/Control/AstroControls.js \
 	$(SRCDIR)/Helpers/AstroGeometry.js \
-	$(SRCDIR)/Map/Control/ol4-scalelinecontrol.js > $(SINGLEFILE)
-#	$(SRCDIR)/Map/Control/ol4-layerswitcher.js 
+	$(SRCDIR)/Map/Control/ol4-scalelinecontrol.js \
+	$(SRCDIR)/Map/Control/ol4-layerswitcher-oo.js > $(SINGLEFILE)
 
 uglify: combine
 	$(UGLIFY) $(SINGLEFILE) > $(UGLIFYFILE)
