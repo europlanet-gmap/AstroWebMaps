@@ -331,7 +331,7 @@ AstroMap.prototype.init = function() {
   });
   this.vectorLayer = new ol.layer.Vector({
 		       source: this.vectorSource,
-		       extent: [0,-90, 360, 90],
+		       //extent: [0,-90, 360, 90],
 		       style: new ol.style.Style({
 			 fill: new ol.style.Fill({
 			   color: 'rgba(255, 0, 0, 0.2)'
