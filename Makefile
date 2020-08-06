@@ -11,7 +11,7 @@
 SRCDIR = js/astrowebmaps
 BUILDDIR = build
 WEBDIR = web
-PUBDIR = ../pilot/AstroWebMaps
+PUBDIR = build/js-min
 # file names
 SINGLEFILE = $(BUILDDIR)/js-singlefile/AstroWebMaps.js
 UGLIFYFILE = $(BUILDDIR)/js-min/AstroWebMaps.js
@@ -26,7 +26,7 @@ init:
 publish: uglify
 	mkdir -p $(PUBDIR)/js
 	cp -p $(UGLIFYFILE) $(PUBDIR)/js/
-	cp -rp $(WEBDIR)/* $(PUBDIR)
+	#cp -rp $(WEBDIR)/* $(PUBDIR)
 
 combine: init
 	rm -f $(SINGLEFILE)

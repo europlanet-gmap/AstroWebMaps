@@ -1,16 +1,16 @@
 # Stage 1
-FROM debian:stable-slim
+FROM node:12 as builder
 
 RUN apt-get update && apt-get install make -y
 
 ADD . /app
 WORKDIR /app
 
-RUN make
+RUN make publish
 
 # Stage 2
 FROM nginx:stable
 
-COPY --from=0 --chown=nginx:nginx /app /app
+COPY --from=builder --chown=nginx:nginx /app /app
 WORKDIR /app
 ADD docker/nginx.conf /etc/nginx/conf.d/default.conf
