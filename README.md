@@ -1,4 +1,7 @@
 # AstroWebMaps
+
+Note: This repository has been moved to [https://code.usgs.gov/astrogeology/astrowebmaps](https://code.usgs.gov/astrogeology/astrowebmaps)
+
 OpenLayers 4.x for planetary mapping
 
 
